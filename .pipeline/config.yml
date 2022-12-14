@@ -1,0 +1,39 @@
+---
+general:
+  buildTool: "npm"
+service:
+  buildToolVersion: "N14"
+  cloudConnectors:
+    transportRequestUploadCTS:
+      credentialId: "integration-cc"
+stages:
+  Build:
+    npmExecuteLint: true
+  Additional Unit Tests:
+    npmExecuteScripts: false
+    karmaExecuteTests: false
+  Malware Scan:
+    malwareExecuteScan: true
+  Compliance:
+    sonarExecuteScan: false
+  Release:
+    transportRequestUploadCTS: true
+steps:
+  npmExecuteLint:
+    failOnError: false
+  npmExecuteScripts:
+    runScripts:
+    - "test"
+  sonarExecuteScan:
+    mode: ""
+    serverUrl: ""
+    organization: ""
+    projectKey: ""
+    sonarTokenCredentialsId: ""
+  transportRequestUploadCTS:
+    endpoint: "http://gcpclm988017.wdf.sap.corp:50000/"
+    uploadCredentialsId: "abapja2"
+    abapPackage: "ZSGPACK"
+    applicationName: "ZMKSTDFIORIAPP1"
+    applicationDescription: "My Fiori App"
+    transportRequestId: "JA1K900037"
