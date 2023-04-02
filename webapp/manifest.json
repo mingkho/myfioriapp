@@ -1,0 +1,102 @@
+{
+  "_version": "1.42.0",
+  "sap.app": {
+    "id": "mkstdfioriapp1",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:basic",
+      "version": "1.8.1",
+      "toolsId": "3951a606-8d98-498e-b737-a402342a49da"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+		"rootView": {
+			"viewName": "mkstdfioriapp1.view.ObjectPageWithPogressAndRatingIndicators",
+			"type": "XML",
+			"async": true
+		},
+		"resourceRoots": {
+			"sap.uxap.sample.SharedBlocks": "./SharedBlocks"
+		},
+		"dependencies": {
+			"libs": {
+				"sap.m": {},
+				"sap.uxap": {}
+			}
+		},
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"view/ObjectPageWithPogressAndRatingIndicators.view.xml",
+					"./SharedBlocks/employment/EmploymentBlockJob.js",
+					"./SharedBlocks/employment/EmploymentBlockJobCollapsed.view.xml",
+					"./SharedBlocks/employment/EmploymentBlockJobExpanded.view.xml",
+					"./SharedBlocks/goals/GoalsBlock.view.xml",
+					"./SharedBlocks/goals/GoalsBlockView.js",
+					"./SharedBlocks/goals/GoalsBlock.js",
+					"./SharedBlocks/goals/GoalsBlockController.controller.js",
+					"./SharedBlocks/personal/BlockAdresses.js",
+					"./SharedBlocks/personal/BlockAdresses.view.xml",
+					"./SharedBlocks/personal/BlockMailing.js",
+					"./SharedBlocks/personal/BlockMailing.view.xml",
+					"./SharedBlocks/personal/BlockPhoneNumber.js",
+					"./SharedBlocks/personal/BlockPhoneNumber.view.xml",
+					"./SharedBlocks/personal/BlockSocial.js",
+					"./SharedBlocks/personal/BlockSocial.view.xml",
+					"./SharedBlocks/personal/PersonalBlockPart1.js",
+					"./SharedBlocks/personal/PersonalBlockPart1.view.xml",
+					"./SharedBlocks/personal/PersonalBlockPart2.js",
+					"./SharedBlocks/personal/PersonalBlockPart2.view.xml",
+					"./SharedBlocks/employment/BlockEmpDetailPart1.js",
+					"./SharedBlocks/employment/BlockEmpDetailPart1.view.xml",
+					"./SharedBlocks/employment/BlockEmpDetailPart2.js",
+					"./SharedBlocks/employment/BlockEmpDetailPart2.view.xml",
+					"./SharedBlocks/employment/BlockEmpDetailPart3.js",
+					"./SharedBlocks/employment/BlockEmpDetailPart3.view.xml",
+					"./SharedBlocks/employment/BlockJobInfoPart1.js",
+					"./SharedBlocks/employment/BlockJobInfoPart1.view.xml",
+					"./SharedBlocks/employment/BlockJobInfoPart2.js",
+					"./SharedBlocks/employment/BlockJobInfoPart2.view.xml",
+					"./SharedBlocks/employment/BlockJobInfoPart3.js",
+					"./SharedBlocks/employment/BlockJobInfoPart3.view.xml",
+					"manifest.json"
+				]
+			}
+		}
+	}
+}
